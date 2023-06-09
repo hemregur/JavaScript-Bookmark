@@ -1,0 +1,289 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+}
+
+.bookMark {
+    border: 1px solid #e9e9e9;
+    max-width: 930px;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 900px;
+    height: 100px;
+    padding: 10px;
+}
+
+.navRgt {
+    display: flex;
+    align-items: center;
+}
+
+.navLft {
+    display: flex;
+    align-items: center;
+
+    & h1 {
+        line-height: 0px;
+    }
+}
+
+.nav img {
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    margin-right: 10px;
+}
+
+#users {
+    margin-left: 4px;
+    font-weight: bold;
+}
+
+.item {
+    display: flex;
+    align-items: center;
+    position: relative;
+    background-color: #fff;
+    border: 1px solid #e9e9e9;
+    border-radius: 10px;
+    margin: 10px;
+    padding: 10px;
+
+    &:hover .delete {
+        display: flex;
+    }
+}
+
+.item:nth-child(even) {
+    background-color: #f6f6f6;
+}
+
+.itemTitle {
+    font-weight: bold;
+    max-width: 80%;
+}
+
+.itemUrl {
+    max-width: 80%;
+
+    & a {
+        color: #6a00ffb9;
+    }
+
+    & a:hover {
+        color: #6a00ff;
+    }
+}
+
+.itemIcon {
+
+    & i {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 20px;
+        height: 20px;
+        margin-right: 14px;
+        padding: 16px;
+        font-size: 20px;
+        background-color: #6a00ff4a;
+        color: #6a00ff;
+        border-radius: 100%;
+    }
+
+    & img {
+        width: 50px;
+        margin-right: 10px;
+    }
+}
+
+.delete {
+    position: absolute;
+    right: 10px;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    background-color: #6a00ff4a;
+    color: #6a00ff;
+    border: 1px solid #e9e9e9;
+    border-radius: 10px;
+    cursor: pointer;
+
+    & i {
+        font-size: 1.4rem;
+        transform: rotate(45deg);
+        pointer-events: none;
+    }
+
+    &.delete:hover {
+        background-color: #6a00ff6b;
+    }
+}
+
+.addBtn {
+    position: fixed;
+    right: 30px;
+    bottom: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    background-color: #6a00ff;
+    color: #fff;
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+    padding: 20px;
+    transition: 300ms;
+    cursor: pointer;
+
+    & i {
+        transition: 300ms;
+    }
+
+
+}
+
+.addBtnActc {
+    background-color: red;
+    transition: 300ms;
+
+    & i {
+        transform: scale(1.4) rotate(45deg);
+        transition: 300ms;
+    }
+}
+
+.popUp {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(16px);
+}
+
+.popUp2 {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(16px);
+    z-index: 99998;
+}
+
+.popUp3 {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(16px);
+    z-index: 99998;
+
+    & .popBox {
+        text-align: center;
+    }
+
+    & .popBox p {
+        margin-bottom: 20px;
+    }
+}
+
+.deleteButtons {
+    display: flex;
+
+    & button:nth-child(1) {
+        margin-right: 10px;
+        background-color: #ff5b5bde;
+    }
+
+    & button:hover {
+        opacity: .8;
+    }
+}
+
+
+.popBox {
+    width: 400px;
+    border: 1px solid #e9e9e9;
+    padding: 10px;
+    background-color: #ffffff;
+    border-radius: 4px;
+
+    & input {
+        width: 100%;
+        border: 1px solid #e9e9e9;
+        border-radius: 4px;
+        margin: 8px 0;
+        padding: 20px 10px;
+        display: block;
+        box-sizing: border-box;
+        font-size: 1rem;
+    }
+
+    & button {
+        padding: 20px;
+        background-color: #6a00ff;
+        color: #fff;
+        border: 0px;
+        border-radius: 4px;
+        display: block;
+        width: 100%;
+        font-size: 1rem;
+        cursor: pointer;
+    }
+}
+
+.popUpFlex {
+    display: flex;
+}
+
+.empty {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 15%;
+
+    & .emptyIcon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 120px;
+        height: 120px;
+        background-color: #6a00ff4a;
+        color: #6a00ff;
+        border-radius: 100%;
+        margin-bottom: 20px;
+    }
+
+    & i {
+        font-size: 6rem;
+    }
+}
